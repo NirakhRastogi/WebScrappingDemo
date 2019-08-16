@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  h1 Web Scrapping
+  p Welcome to Web Scrapping
+  form(method="post",action="/scrap")
+      input(type="text",name="scrapUrl")
+      input(type="submit",value="Submit")
+
+  - if(scrapUrl.ScriptExecutionTime && scrapUrl.ScriptExecutionTime != null)
+        h3 Script Execution Time = #{scrapUrl.ScriptExecutionTime}
+        h3 Summary
+        - for(let key of Object.keys(scrapUrl.ParseData))
+            - if(key.toLowerCase() == 'image')
+                h6 Image
+                img(src=scrapUrl.ParseData[key], alt="")
+            - else
+                h6 #{key.charAt(0).toUpperCase() + key.slice(1)}
+                label #{scrapUrl.ParseData[key]}
+        h3 OG Parameters Found Are
+        - for(let key of Object.keys(scrapUrl.FullInfo.MetaInformation))
+            - if(key.toLowerCase().startsWith('og'))
+              - if(key.toLowerCase().includes('image'))
+                  h6 #{key.charAt(0).toUpperCase() + key.slice(1)}
+                  img(src=scrapUrl.FullInfo.MetaInformation[key], alt="")
+              - else
+                  h6 #{key.charAt(0).toUpperCase() + key.slice(1)}
+                  label #{scrapUrl.FullInfo.MetaInformation[key]}
+        h3 Image URLS
+        - for(let imUrlPointer in scrapUrl.FullInfo.ImageInformation)
+            p #{imUrlPointer} : #{scrapUrl.FullInfo.ImageInformation[imUrlPointer].Source}

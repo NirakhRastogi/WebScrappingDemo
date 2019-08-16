@@ -1,0 +1,31 @@
+[ERR!] cwd  : D:\Projects\Javascript\Node JS\WebScrappingMetadata
+[ERR!] os   : Windows_NT 10.0.16299
+[ERR!] argv : "C:\\Program Files\\nodejs\\node.exe" "C:\\Users\\M1043104\\AppData\\Roaming\\npm\\node_modules\\tsd\\build\\cli.js" "install" "node"
+[ERR!] node : v10.16.0
+[ERR!] tsd  : 0.6.5
+[ERR!] Error: internalBinding is not defined
+[ERR!] CODE : undefined
+[ERR!] internalBinding is not defined
+[ERR!] If you need help, you may report this error at:
+    https://github.com/DefinitelyTyped/tsd/issues
+
+[ERR!] 
+ReferenceError: internalBinding is not defined
+    at internal/util/inspect.js:31:15
+    at req_ (C:\Users\M1043104\AppData\Roaming\npm\node_modules\tsd\node_modules\natives\index.js:137:5)
+    at require (C:\Users\M1043104\AppData\Roaming\npm\node_modules\tsd\node_modules\natives\index.js:110:12)
+    at util.js:25:21
+    at req_ (C:\Users\M1043104\AppData\Roaming\npm\node_modules\tsd\node_modules\natives\index.js:137:5)
+    at require (C:\Users\M1043104\AppData\Roaming\npm\node_modules\tsd\node_modules\natives\index.js:110:12)
+    at fs.js:42:21
+    at req_ (C:\Users\M1043104\AppData\Roaming\npm\node_modules\tsd\node_modules\natives\index.js:137:5)
+    at Object.req [as require] (C:\Users\M1043104\AppData\Roaming\npm\node_modules\tsd\node_modules\natives\index.js:54:10)
+    at Object.<anonymous> (C:\Users\M1043104\AppData\Roaming\npm\node_modules\tsd\node_modules\graceful-fs\fs.js:1:37)
+
+[ERR!] tsd.json could not be retrieved
+
+[ERR!] .tsdrc could not be retrieved
+
+[ERR!] Please include the following file with any support request:
+    D:\Projects\Javascript\Node JS\WebScrappingMetadata\tsd-debug.log
+
